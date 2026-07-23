@@ -10,7 +10,7 @@ const isPrime=(number)=> {
     return false;
   }
 // ab yah sirf odd dhakay ga
-  let limit = Math.sqrt(n);
+  let limit = Math.sqrt(number);
   for (let i = 3; i <= limit; i += 2) {
     if (number % i === 0) {
       return false;
@@ -21,9 +21,9 @@ const isPrime=(number)=> {
 let count = 0;
 let resultText = "";
 for (let i = 1; i <= 1000; i++) {
-  if (isPrime(number)) {
+  if (isPrime(i)) {
     count = count + 1;
-    resultText = resultText + number + ", ";
+    resultText = resultText + i + ", ";
   }
 }
 console.log("Primes between 1 and 1000:");
